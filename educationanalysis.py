@@ -92,7 +92,7 @@ def get_xy_gdp(ykey, inds_df):
 def plot_xy_gdp(inds_df, ykey='Programme for International Student Assessment (PISA) score in mathematics'):
   comparematrix = get_xy_gdp(ykey, inds_df)
 
-  plt.xlabel('% GDP per capita spent on education ')
+  plt.xlabel('GDP per capita spent on education ')
   plt.ylabel(ykey)
 
   pairs = sorted(list(zip(comparematrix[0], comparematrix[1])), key=lambda x: x[0])
