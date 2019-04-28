@@ -1,5 +1,3 @@
-
-
 # Libraries
 import numpy as np
 import pandas as pd
@@ -20,7 +18,7 @@ def plot_corr(df,size=10):
     plt.yticks(range(len(corr.columns)), corr.columns);
     
 def get_country_names(inds_df) :
-  return country_names = inds_df.country_name.unique()
+  return inds_df.country_name.unique()
   
 def df_corr_country(df, country):
   ''' Returns a df properly formatted to find correlation of indicators within a country'''
@@ -91,7 +89,7 @@ def get_xy_gdp(ykey, inds_df):
           break
   return comparematrix
 
-def plot_xy_gdp(ykey='Programme for International Student Assessment (PISA) score in mathematics', inds_df):
+def plot_xy_gdp(inds_df, ykey='Programme for International Student Assessment (PISA) score in mathematics'):
   comparematrix = get_xy_gdp(ykey, inds_df)
 
   plt.xlabel('% GDP per capita spent on education ')
